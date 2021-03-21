@@ -1,5 +1,5 @@
 from ursina import *
-from voxel import set_block_id
+from voxel import set_block_id, block_id
 
 is_init = False
 
@@ -16,7 +16,7 @@ if not is_init:
   player_hand = player_hand or Entity(
     parent=camera.ui,
     model='cube',
-    texture='white_cube',
+    texture=set_block_id(block_id),
     scale=0.5,
     position=ORIGIN_POS,
     rotation=Vec3(-10.0, -10.0, -10.0)

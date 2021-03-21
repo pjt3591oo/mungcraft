@@ -20,7 +20,8 @@ if __name__ == "__main__":
     if key.isdigit():
       block_id = int(key)
       
-      block_id == 1 or block_id == 0 and set_player_hand(block_id)
+      if block_id == 1 or block_id == 0:
+        set_player_hand(block_id)
 
     if held_keys['left mouse'] or held_keys['right mouse']:
       player_hand.position = BLOCK_MAKE_POS
